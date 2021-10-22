@@ -1,0 +1,106 @@
+@use './variables' as *;
+
+.statistics {
+  padding: 32px 0px 40px 0px;
+  background-color: map-get($color, neutral, white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px 0px;
+  border: 1px solid map-get($color, border, lightGrey);
+  border-radius: 8px;
+  @media only screen and (min-width: 1440px) {
+    padding: 48px;
+    flex-direction: row;
+    gap: 42px;
+    flex-wrap: wrap;
+  }
+  .money {
+    h1 {
+      font-size: map-get($font, size, size4);
+      line-height: map-get($font, height, height4);
+      font-weight: map-get($font, weight, bold);
+      color: map-get($color, neutral, black);
+      margin-bottom: 9px;
+    }
+    p {
+      font-size: map-get($font, size, size0);
+      line-height: map-get($font, height, height0);
+      font-weight: map-get($font, weight, normal);
+      color: map-get($color, neutral, darkGray);
+      @media only screen and (min-width: 1440px) {
+        font-size: map-get($font, size, size);
+        line-height: map-get($font, height, height);
+      }
+    }
+  }
+  .line1,
+  .line2 {
+    height: 1px;
+    width: 80px;
+    background-color: map-get($color, neutral, black);
+    opacity: 0.15;
+    @media only screen and (min-width: 1440px) {
+      height: 63px;
+      width: 1px;
+    }
+  }
+  .total {
+    @media only screen and (min-width: 1440px) {
+      margin: 0px 52px 0px 5px;
+    }
+    h1 {
+      font-size: map-get($font, size, size4);
+      line-height: map-get($font, height, height4);
+      font-weight: map-get($font, weight, bold);
+      color: map-get($color, neutral, black);
+      margin-bottom: 9px;
+      @media only screen and (min-width: 1440px) {
+        margin-bottom: 8px;
+      }
+    }
+    p {
+      font-size: map-get($font, size, size0);
+      line-height: map-get($font, height, height0);
+      font-weight: map-get($font, weight, normal);
+      color: map-get($color, neutral, darkGray);
+    }
+  }
+  .days {
+    @media only screen and (min-width: 1440px) {
+      margin-left: 5px;
+    }
+    h1 {
+      font-size: map-get($font, size, size4);
+      line-height: map-get($font, height, height4);
+      font-weight: map-get($font, weight, bold);
+      color: map-get($color, neutral, black);
+      margin-bottom: 9px;
+    }
+    p {
+      font-size: map-get($font, size, size0);
+      line-height: map-get($font, height, height0);
+      font-weight: map-get($font, weight, normal);
+      color: map-get($color, neutral, darkGray);
+    }
+  }
+  .statisticLine {
+    margin-top: 8px;
+    height: 12px;
+    width: 279px;
+    background: map-get($color, background, line);
+    border-radius: 33.5px;
+    @media only screen and (min-width: 1440px) {
+      width: 634px;
+    }
+    .innerLine {
+      width: 218px;
+      height: 12px;
+      background: map-get($color, primary, darkCyan);
+      border-radius: 33.5px;
+      @media only screen and (min-width: 1440px) {
+        width: 496px;
+      }
+    }
+  }
+}

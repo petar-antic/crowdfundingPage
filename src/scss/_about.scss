@@ -1,0 +1,128 @@
+@use './variables' as *;
+
+.about {
+  background-color: map-get($color, neutral, white);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px 76px 24px;
+  row-gap: 24px;
+  border: 1px solid map-get($color, border, lightGrey);
+  border-radius: 8px;
+  @media only screen and (min-width: 1440px) {
+    padding: 48px;
+  }
+  h1 {
+    font-size: map-get($font, size, size2);
+    line-height: map-get($font, height, height2);
+    font-weight: map-get($font, weight, bold);
+    color: map-get($color, neutral, black);
+    @media only screen and (min-width: 1440px) {
+      font-size: map-get($font, size, size3);
+      line-height: map-get($font, height, height3);
+    }
+  }
+  p {
+    margin-bottom: 11px;
+    font-size: map-get($font, size, size0);
+    line-height: map-get($font, height, height3);
+    font-weight: map-get($font, weight, normal);
+    color: map-get($color, neutral, darkGray);
+    @media only screen and (min-width: 1440px) {
+      margin-bottom: 16px;
+      font-size: map-get($font, size, size1);
+      line-height: map-get($font, height, height7);
+    }
+  }
+  .projects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    .project {
+      padding: 24px;
+      border: 1px solid map-get($color, border, project);
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      border-radius: 8px;
+      @media only screen and (min-width: 1440px) {
+        padding: 38px 32px 32px 32px;
+      }
+      .heading {
+        @media only screen and (min-width: 1440px) {
+          display: flex;
+          justify-content: space-between;
+        }
+        h1 {
+          font-size: map-get($font, size, size0);
+          line-height: map-get($font, height, height0);
+          font-weight: map-get($font, weight, bold);
+          color: map-get($color, neutral, black);
+          @media only screen and (min-width: 1440px) {
+            font-size: map-get($font, size, size2);
+            line-height: map-get($font, height, height2);
+          }
+        }
+        h2 {
+          font-size: map-get($font, size, size0);
+          line-height: map-get($font, height, height0);
+          font-weight: map-get($font, weight, medium);
+          color: map-get($color, primary, moderateCyan);
+          @media only screen and (min-width: 1440px) {
+            font-size: map-get($font, size, size);
+            line-height: map-get($font, height, height);
+          }
+        }
+      }
+      p {
+        font-size: map-get($font, size, size0);
+        line-height: map-get($font, height, height3);
+        font-weight: map-get($font, weight, normal);
+        color: map-get($color, neutral, darkGray);
+        @media only screen and (min-width: 1440px) {
+          font-size: map-get($font, size, size);
+          line-height: map-get($font, height, height7);
+        }
+      }
+      .box {
+        @media only screen and (min-width: 1440px) {
+          display: flex;
+          justify-content: space-between;
+        }
+        .numberLeft {
+          display: flex;
+          align-items: center;
+          column-gap: 8px;
+          h1 {
+            font-size: map-get($font, size, size4);
+            line-height: map-get($font, height, height4);
+            font-weight: map-get($font, weight, bold);
+            @media only screen and (min-width: 1440px) {
+              font-size: map-get($font, size, size4);
+              line-height: map-get($font, height, height4);
+            }
+          }
+          span {
+            font-size: map-get($font, size, size);
+            line-height: map-get($font, height, height);
+            font-weight: map-get($font, weight, normal);
+            @media only screen and (min-width: 1440px) {
+              font-size: map-get($font, size, size);
+              line-height: map-get($font, height, height);
+            }
+          }
+        }
+        button {
+          width: 157px;
+          height: 48px;
+        }
+      }
+    }
+    .disable {
+      border: 1px solid map-get($color, border, lightGrey);
+      opacity: 0.5;
+      button {
+        background: map-get($color, background, disable);
+      }
+    }
+  }
+}

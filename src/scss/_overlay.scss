@@ -1,0 +1,266 @@
+@use './variables' as *;
+
+.overlay {
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 121px 24px 120px 24px;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.5);
+  @media only screen and (min-width: 1440px) {
+    padding: 184px 355px 280px 355px;
+  }
+  .modal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 32px 24px 31px 24px;
+    background-color: map-get($color, neutral, white);
+    border: 1px solid map-get($color, border, lightGrey);
+    border-radius: 8px;
+    @media only screen and (min-width: 1440px) {
+      padding: 48.5px 48px;
+      row-gap: 16px;
+    }
+    .modalHeading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        font-size: map-get($font, size, size2);
+        line-height: map-get($font, height, height2);
+        font-weight: map-get($font, weight, bold);
+        color: map-get($color, neutral, black);
+      }
+      @media only screen and (min-width: 1440px) {
+        font-size: map-get($font, size, size7);
+        line-height: map-get($font, height, height7);
+      }
+    }
+    p {
+      font-size: map-get($font, size, size0);
+      line-height: map-get($font, height, height3);
+      font-weight: map-get($font, weight, normal);
+      color: map-get($color, neutral, darkGray);
+      @media only screen and (min-width: 1440px) {
+        font-size: map-get($font, size, size1);
+        line-height: map-get($font, height, height8);
+        padding-bottom: 16px;
+      }
+    }
+    .modalBox {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      .modalItem {
+        border: 1px solid map-get($color, border, project);
+        border-radius: 8px;
+        .upperSide {
+          padding: 24px 24px 32px 24px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 24px;
+          @media only screen and (min-width: 1440px) {
+            padding: 33px 28px 32px 28px;
+          }
+          .inputBox {
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            .circle {
+              border: 1px solid map-get($color, border, project);
+              border-radius: 50%;
+              width: 24px;
+              height: 24px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &:hover {
+                cursor: pointer;
+              }
+              input {
+                appearance: none;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                background-color: map-get($color, neutral, white);
+                &:checked {
+                  background-color: map-get($color, primary, moderateCyan);
+                  box-shadow: 0 0 0 1px map-get($color, primary, moderateCyan);
+                }
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+            .heading {
+              &:hover {
+                font-weight: map-get($font, weight, bold);
+              }
+              @media only screen and (min-width: 1440px) {
+                display: flex;
+                align-items: center;
+                column-gap: 17px;
+                width: 100%;
+              }
+              h1 {
+                font-size: map-get($font, size, size0);
+                line-height: map-get($font, height, height0);
+                font-weight: map-get($font, weight, bold);
+                color: map-get($color, neutral, black);
+                &:hover {
+                  cursor: pointer;
+                  color: map-get($color, primary, moderateCyan);
+                  font-weight: map-get($font, weight, bold);
+                }
+                @media only screen and (min-width: 1440px) {
+                  font-size: map-get($font, size, size1);
+                  line-height: map-get($font, height, height1);
+                }
+              }
+              h2 {
+                margin-top: 8px;
+                font-size: map-get($font, size, size0);
+                line-height: map-get($font, height, height0);
+                font-weight: map-get($font, weight, medium);
+                color: map-get($color, primary, moderateCyan);
+                @media only screen and (min-width: 1440px) {
+                  margin-top: 0px;
+                }
+              }
+              .numberRight {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                column-gap: 8px;
+                @media only screen and (max-width: 1439px) {
+                  display: none;
+                }
+              }
+            }
+          }
+          p {
+            font-size: map-get($font, size, size0);
+            line-height: map-get($font, height, height3);
+            font-weight: map-get($font, weight, normal);
+            color: map-get($color, neutral, darkGray);
+            @media only screen and (min-width: 1440px) {
+              font-size: map-get($font, size, size);
+              line-height: map-get($font, height, height9);
+            }
+          }
+          .numberLeft {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            @media only screen and (min-width: 1440px) {
+              display: none;
+            }
+            h1 {
+              font-size: map-get($font, size, size2);
+              line-height: map-get($font, height, height2);
+              font-weight: map-get($font, weight, bold);
+            }
+            span {
+              font-size: map-get($font, size, size);
+              line-height: map-get($font, height, height);
+              font-weight: map-get($font, weight, normal);
+            }
+          }
+        }
+      }
+      .disable {
+        border: 1px solid map-get($color, border, lightGrey);
+        opacity: 0.5;
+      }
+      .selected {
+        border: 1px solid map-get($color, primary, moderateCyan);
+        .upperSide {
+          padding-bottom: 24.5px;
+        }
+        .bottomSide {
+          border-top: 1px solid map-get($color, border, project);
+          padding: 23.5px 24px 24px 24px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          @media only screen and (min-width: 1440px) {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          h2 {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 28px;
+            color: #7a7a7a;
+          }
+          .inputGroup {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            column-gap: 16px;
+            @media only screen and (min-width: 1440px) {
+              margin-top: 0px;
+            }
+            input {
+              width: 100px;
+              padding: 15px 0px 16px 41px;
+              background: url(../../assets/images/dollar.png);
+              font-size: 14px;
+              font-weight: 700;
+              border: 1px solid rgba(0, 0, 0, 0.0497193);
+              border-radius: 33.5px;
+              background-repeat: no-repeat;
+              background-position: top 17px left 24px;
+            }
+            button {
+              width: 115px;
+              padding: 15px 25px 16px 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 24px;
+    margin-top: 21px;
+    padding: 32px 24px 40px 24px;
+    background-color: map-get($color, neutral, white);
+    border: 1px solid map-get($color, border, lightGrey);
+    border-radius: 8px;
+    h1 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+    }
+    p {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: #7a7a7a;
+    }
+    button {
+      margin-top: 7.5px;
+      padding: 15px 32.5px 16px 33.5px;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,45 @@
+@use './variables' as *;
+@use './header' as *;
+@use './mastercraft' as *;
+@use './statistics' as *;
+@use './about' as *;
+@use './overlay' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontFamily;
+  .overflowHidden {
+    overflow-y: hidden;
+  }
+  .b1 {
+    border: 1px solid red;
+  }
+  .hidden {
+    display: none;
+  }
+  body {
+    .hidden {
+      display: none;
+    }
+    .linearBkgd {
+      position: absolute;
+      background: map-get($color, background, linear);
+      opacity: 60%;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .container {
+    background-color: map-get($color, background, container);
+    display: flex;
+    flex-direction: column;
+    padding: 0px 24px 76px 24px;
+    row-gap: 24px;
+    @media only screen and (min-width: 1440px) {
+      padding: 0px 355px 124px 355px;
+    }
+  }
+}

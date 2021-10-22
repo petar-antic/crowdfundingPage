@@ -1,0 +1,82 @@
+// // // Typography
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+// Font
+$fontFamily: 'Commissioner', sans-serif;
+
+$font: (
+  size: (
+    size: 15px,
+    size0: 14px,
+    size1: 16px,
+    size2: 18px,
+    size3: 20px,
+    size4: 32px,
+    size5: 13px,
+    size6: 28px,
+    size7: 24px,
+  ),
+  height: (
+    height: 18px,
+    height0: 17px,
+    height1: 20px,
+    height2: 22px,
+    height3: 24px,
+    height4: 39px,
+    height5: 16px,
+    height6: 34px,
+    height7: 30px,
+    height8: 29px,
+    height9: 28px,
+  ),
+  weight: (
+    regular: 400,
+    medium: 500,
+    bold: 700,
+  ),
+);
+
+// // Colors
+
+$color: (
+  primary: (
+    moderateCyan: hsl(176, 50%, 47%),
+    darkCyan: hsl(176, 72%, 28%),
+  ),
+  neutral: (
+    black: hsl(0, 0%, 0%),
+    white: hsl(0, 100%, 100%),
+    darkGray: hsl(0, 0%, 48%),
+  ),
+  border: (
+    lightGrey: rgba(0, 0%, 0%, 0.05),
+    project: rgba(0, 0%, 0%, 0.15),
+  ),
+  background: (
+    linear:
+      linear-gradient(
+        180deg,
+        rgba(0, 0%, 0%, 1) 0%,
+        rgba(255, 255, 255, 0.01) 100%
+      ),
+    container: hsl(0, 0%, 98%),
+    line: hsla(0, 0%, 18%, 0.05),
+    disable: hsla(0, 0%, 18%, 1),
+  ),
+);
+
+// Button
+
+.button {
+  border: none;
+  border-radius: 33.5px;
+  background-color: #3cb3ab;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  &:hover {
+    background-color: #147a73;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,100 @@
+@use './variables' as *;
+
+header {
+  height: 300px;
+  background: url('../../assets/images/image-hero-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @media only screen and (min-width: 1440px) {
+    height: 400px;
+    background: url('../../assets/images/image-hero-desktop.jpg');
+  }
+  .navMenu {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: map-get($color, neutral, white);
+    width: 327px;
+    bottom: 0;
+    left: 24px;
+    border-radius: 8px;
+    border: 1px solid map-get($color, border, lightGray);
+    li:first-child {
+      border-bottom: 1px solid map-get($color, border, lightGray);
+    }
+    li:last-child {
+      border-top: 1px solid map-get($color, border, lightGray);
+    }
+    li {
+      padding: 24px 0 24px 24px;
+      a {
+        text-decoration: none;
+        color: map-get($color, neutral, black);
+        font-size: map-get($font, size, size2);
+        line-height: map-get($font, height, height2);
+        font-weight: map-get($font, weight, medium);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  nav {
+    padding: 32px 24px 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (min-width: 1440px) {
+      padding: 50px 165px 0px 166px;
+    }
+    .menu {
+      @media only screen and (max-width: 1439px) {
+        display: none;
+      }
+      display: flex;
+      column-gap: 32px;
+      li {
+        list-style-type: none;
+
+        a {
+          font-weight: map-get($font, weight, medium);
+          font-size: map-get($font, size, size5);
+          line-height: map-get($font, height, height5);
+          color: map-get($color, neutral, white);
+          text-decoration: none;
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .logo {
+      z-index: 2;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .toggle {
+      content: url('../../assets/images/icon-hamburger.svg');
+      right: 0;
+      z-index: 2;
+      &:hover {
+        cursor: pointer;
+      }
+      @media only screen and (min-width: 1440px) {
+        display: none;
+      }
+    }
+    .active {
+      content: url('../../assets/images/icon-close-menu.svg');
+    }
+  }
+}
