@@ -21,7 +21,7 @@ The designs were created to the following widths:
 - Black: hsl(0, 0%, 0%)
 - Dark gray: hsl(0, 0%, 48%)
 
-## Typography
+### Typography
 
 ### Body Copy
 
@@ -31,3 +31,5 @@ The designs were created to the following widths:
 
 - Family: [Commissioner](https://fonts.google.com/specimen/Commissioner)
 - Weights: 400, 500, 700
+
+
