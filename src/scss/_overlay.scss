@@ -13,6 +13,9 @@
   background-color: rgba(0, 0, 0, 0.5);
   @media only screen and (min-width: 1440px) {
     padding: 184px 355px 280px 355px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .modal {
     display: flex;
@@ -194,8 +197,8 @@
           }
           h2 {
             font-weight: normal;
-            font-size: 14px;
-            line-height: 28px;
+            font-size: map-get($font, size, size0);
+            line-height: map-get($font, height, height9);
             color: #7a7a7a;
           }
           .inputGroup {
@@ -210,9 +213,10 @@
               width: 100px;
               padding: 15px 0px 16px 41px;
               background: url(../../assets/images/dollar.png);
-              font-size: 14px;
-              font-weight: 700;
-              border: 1px solid rgba(0, 0, 0, 0.0497193);
+              font-size: map-get($font, size, size0);
+              line-height: map-get($font, height, height9);
+              font-weight: map-get($font, weight, bold);
+              border: 1px solid map-get($color, border, lightGrey);
               border-radius: 33.5px;
               background-repeat: no-repeat;
               background-position: top 17px left 24px;
@@ -240,16 +244,33 @@
     background-color: map-get($color, neutral, white);
     border: 1px solid map-get($color, border, lightGrey);
     border-radius: 8px;
+    @media only screen and (min-width: 1440px) {
+      width: 540px;
+      height: 449px;
+      padding: 48px;
+      row-gap: 16px;
+    }
+    img {
+      @media only screen and (min-width: 1440px) {
+        height: 90px;
+        width: 90px;
+      }
+    }
     h1 {
       font-weight: bold;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: map-get($font, size, size2);
+      line-height: map-get($font, height, height2);
       color: #000000;
+      @media only screen and (min-width: 1440px) {
+        margin-top: 31.5px;
+        font-size: map-get($font, size, size7);
+        line-height: map-get($font, height, height8);
+      }
     }
     p {
       font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
+      font-size: map-get($font, size, size0);
+      line-height: map-get($font, height, height3);
       color: #7a7a7a;
     }
     button {
