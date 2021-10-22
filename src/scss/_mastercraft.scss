@@ -1,0 +1,101 @@
+@use './variables' as *;
+
+.mastercraft {
+  margin-top: -52px;
+  background-color: map-get($color, neutral, white);
+  text-align: center;
+  position: relative;
+  border: 1px solid map-get($color, border, lightGrey);
+  border-radius: 8px;
+  @media only screen and (min-width: 1440px) {
+    margin-top: -92px;
+  }
+  img {
+    margin-top: -28px;
+  }
+  h1 {
+    padding: 24px 24px 16px 24px;
+    font-size: map-get($font, size, size3);
+    line-height: map-get($font, height, height3);
+    font-weight: map-get($font, weight, bold);
+    @media only screen and (min-width: 1440px) {
+      display: none;
+    }
+  }
+  h2 {
+    @media only screen and (max-width: 1439px) {
+      display: none;
+    }
+    padding: 28px 0px 15px 0px;
+    font-size: map-get($font, size, size6);
+    line-height: map-get($font, height, height6);
+    content: 'Mastercraft Bamboo Monitor Riser';
+  }
+  p {
+    padding: 0px 23.5px;
+    font-size: map-get($font, size, size0);
+    line-height: map-get($font, height, height3);
+    font-weight: map-get($font, weight, normal);
+    color: map-get($color, neutral, darkGray);
+    @media only screen and (min-width: 1440px) {
+      font-size: map-get($font, size, size1);
+      line-height: map-get($font, height, height1);
+    }
+  }
+  .buttons {
+    padding: 24px 24px 40px 24px;
+    display: flex;
+    align-items: flex-end;
+    @media only screen and (min-width: 1440px) {
+      justify-content: space-between;
+      padding: 40px 48px 48px 48px;
+    }
+    .back {
+      padding: 17px 42px 19px 42px;
+      margin-right: 9px;
+      font-size: map-get($font, size, size1);
+      @media only screen and (min-width: 1440px) {
+        margin-right: 0px;
+      }
+    }
+    .bookmarkBox {
+      @media only screen and (min-width: 1440px) {
+        border-radius: 33.5px;
+        background: map-get($color, background, line);
+        height: 56px;
+        display: flex;
+        align-items: center;
+        font-weight: map-get($font, weight, bold);
+        font-size: map-get($font, size, size1);
+        line-height: map-get($font, height, height1);
+        color: map-get($color, normal, darkGray);
+      }
+      .bookmark {
+        content: url(../../assets/images/icon-bookmark.svg);
+        &:hover {
+          cursor: pointer;
+        }
+        @media only screen and (min-width: 1440px) {
+          margin-top: 0px;
+        }
+      }
+      .bookmarked {
+        content: url(../../assets/images/icon-bookmarked.svg);
+      }
+      span {
+        display: none;
+        @media only screen and (min-width: 1440px) {
+          display: inline;
+          padding: 17px 24px 19px 16px;
+        }
+      }
+    }
+    .bookmarked {
+      span {
+        @media only screen and (min-width: 1440px) {
+          color: map-get($color, primary, darkCyan);
+        }
+      }
+    }
+  }
+}
