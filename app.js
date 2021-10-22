@@ -6,6 +6,7 @@ const navMenu = document.querySelector('.navMenu');
 
 const backThisProject = document.querySelector('.back');
 const bookmark = document.querySelector('.bookmark');
+const bookmarkBox = document.querySelector('.bookmarkBox');
 
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal');
@@ -24,7 +25,8 @@ function toggleMenu() {
   body.classList.toggle('overflowHidden');
 }
 
-bookmark.addEventListener('click', function () {
+bookmarkBox.addEventListener('click', function () {
+  bookmarkBox.classList.toggle('bookmarked');
   bookmark.classList.toggle('bookmarked');
 });
 

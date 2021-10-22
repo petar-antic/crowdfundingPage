@@ -225,6 +225,11 @@ header nav .active {
     padding: 17px 24px 19px 16px;
   }
 }
+@media only screen and (min-width: 1440px) {
+  .mastercraft .buttons .bookmarked span {
+    color: #147b74;
+  }
+}
 
 .statistics {
   padding: 32px 0px 40px 0px;
